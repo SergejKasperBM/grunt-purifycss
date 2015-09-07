@@ -15,9 +15,12 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('purifycss', 'Clean unnecessary CSS', function(task) {
     // Merge task-specific and/or target-specific options with these defaults.
+
     var data = this.data;
     if(task){
+      console.log("Task: ", task);
       var data = this.data[task];
+      console.log("Task: ", JSON.stringify(this.data[task]));
     }
     var options = this.options({
     });
