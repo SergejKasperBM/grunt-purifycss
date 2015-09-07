@@ -28,10 +28,19 @@ grunt.initConfig({
   purifycss: {
     options: {},
     target: {
+      // run when purify (TODO: Run mysubtask as well)
       src: ['test/fixtures/*.html', 'test/fixtures/*.js'],
       css: ['test/fixtures/*.css'],
       dest: 'tmp/purestyles.css'
     },
+    mysubtask: {
+      target: {
+        // run when purify:mysubtask
+        src: ['test/mysubtask/*.html', 'test/mysubtask/*.js'],
+        css: ['test/mysubtask/*.css'],
+        dest: 'tmp/mysubtask/purestyles.css'
+      },
+    }
   },
 });
 ```
